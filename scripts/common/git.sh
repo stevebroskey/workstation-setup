@@ -13,6 +13,7 @@ brew cask install sourcetree
 
 echo
 echo "Putting a sample git-pair file in ~/.pairs"
+#TODO: Put our pair file here
 cp files/.pairs ~/.pairs
 
 echo

@@ -7,6 +7,7 @@ brew install rbenv
 brew install watch
 cp files/dircolors.ansi-dark ~/.dircolors
 cp files/.inputrc ~/.inputrc
+#TODO: make this rm -i or else pass the -f
 rm -rf ~/.bash_it
 export BASH_IT="$HOME/.bash_it"
 git clone https://github.com/Bash-it/bash-it.git ~/.bash_it

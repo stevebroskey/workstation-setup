@@ -19,6 +19,7 @@ echo
 echo "Installing Homebrew services..."
 brew tap homebrew/services
 
+###TODO: do we really need pivotal tap?
 echo
 echo "Adding Pivotal tap to Homebrew"
 brew tap pivotal/tap

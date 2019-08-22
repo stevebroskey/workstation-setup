@@ -28,7 +28,8 @@ brew cask install firefox
 
 # Communication
 
-brew cask install slack
+#TODO: "Officially", we don't need slack (make optional param?)
+#brew cask install slack
 
 # Text Editors
 

@@ -10,6 +10,7 @@ open /Applications/Flycut.app
 
 echo
 echo "Installing vim configuration"
+#TODO: Make this ours
 pushd ~/
 if [ ! -d ~/.vim ]; then
     git clone https://github.com/pivotal/vim-config.git ~/.vim
