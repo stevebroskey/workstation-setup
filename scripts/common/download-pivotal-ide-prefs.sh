@@ -1,6 +1,6 @@
 pushd ~/workspace
 if [ ! -d ~/workspace/pivotal_ide_prefs ]; then
-    echo
+    echo 'TODO: Install our own IDE preferences!'
     echo "Downloading Pivotal IDE preferences"
     git clone https://github.com/pivotal/pivotal_ide_prefs.git
 fi

@@ -7,6 +7,7 @@ brew install git-pair
 brew install git-together
 brew install git-author
 brew install vim
+#TODO: Add .vimrc stuff (here?)
 
 brew cask install rowanj-gitx
 brew cask install sourcetree

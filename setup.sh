@@ -6,6 +6,7 @@
 #   - a list of components to install, see scripts/opt-in/ for valid options
 #
 # Environment variables:
+# TODO: just remove and replace with homebrew analytics - if that's even a thing.
 #   - SKIP_ANALYTICS:  Set this to 1 to not send usage data to our Google Analytics account
 #
 
@@ -18,11 +19,8 @@ sudo true;
 clear
 
 MY_DIR="$(dirname "$0")"
-SKIP_ANALYTICS=${SKIP_ANALYTICS:-0}
-if (( SKIP_ANALYTICS == 0 )); then
-    clientID=$(od -vAn -N4 -tx  < /dev/urandom)
-    source ${MY_DIR}/scripts/helpers/google-analytics.sh ${clientID} start $@
-else
+SKIP_ANALYTICS=1
+if (( SKIP_ANALYTICS == 1 )); then
     export HOMEBREW_NO_ANALYTICS=1
 fi
 
@@ -58,6 +56,3 @@ do
 done
 
 source ${MY_DIR}/scripts/common/finished.sh
-if (( SKIP_ANALYTICS == 0 )); then
-    source ${MY_DIR}/scripts/helpers/google-analytics.sh ${clientID} finish $@
-fi

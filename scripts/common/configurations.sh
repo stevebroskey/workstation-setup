@@ -3,10 +3,12 @@ echo "Configuring iTerm"
 cp files/com.googlecode.iterm2.plist ~/Library/Preferences
 
 echo "Configuring ShiftIt"
+##TODO: Open a non-signed app (Shiftit)
 open /Applications/ShiftIt.app
 
-echo "Configuring FlyCut"
-open /Applications/Flycut.app
+## Remove FlyCut because it's no longer installed
+## echo "Configuring FlyCut"
+## open /Applications/Flycut.app
 
 echo
 echo "Installing vim configuration"

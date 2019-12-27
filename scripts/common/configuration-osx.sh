@@ -29,5 +29,5 @@ dockutil --list | awk -F\t '{print "dockutil --remove \""$1"\" --no-restart"}' |
 dockutil --add /Applications/Google\ Chrome.app --no-restart
 dockutil --add /Applications/iTerm.app
 
- 
- 
+
+## TODO: Add/configure keyboard toggle: Command/Option
