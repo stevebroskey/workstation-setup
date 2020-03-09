@@ -19,6 +19,9 @@ echo
 echo "Setting global Git configurations"
 git config --global core.editor /usr/local/bin/vim
 git config --global transfer.fsckobjects true
+git config --global core.excludesfile '~/.gitignore'
+if ! grep -q '*.sw[op]' ~/.gitignore; then
+	export '*.sw[op]' >> ~/.gitignore
 
 HOOKS_DIRECTORY=$HOME/workspace/git-hooks-core
 if [ ! -d $HOOKS_DIRECTORY ]; then

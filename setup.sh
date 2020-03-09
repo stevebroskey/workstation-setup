@@ -17,17 +17,25 @@ sudo -K
 sudo true;
 clear
 
+updateFile() {
+	#two=$2
+	#def='~/.bash_profile'
+	#file=${two:-$def}
+	#echo $two, $def, $file
+	#if ! grep -q "$1" "$file"; then
+		#echo "$1" >> "$file"
+	if ! grep -q "$1" ~/.bash_profile; then
+		echo "$1" >> ~/.bash_profile
+	fi
+}
+export -f updateFile
+
 MY_DIR="$(dirname "$0")"
-SKIP_ANALYTICS=${SKIP_ANALYTICS:-0}
-if (( SKIP_ANALYTICS == 0 )); then
-    clientID=$(od -vAn -N4 -tx  < /dev/urandom)
-    source ${MY_DIR}/scripts/helpers/google-analytics.sh ${clientID} start $@
-else
-    export HOMEBREW_NO_ANALYTICS=1
-fi
+export HOMEBREW_NO_ANALYTICS=1
 
 # Note: Homebrew needs to be set up first
 source ${MY_DIR}/scripts/common/homebrew.sh
+exit 1
 source ${MY_DIR}/scripts/common/configuration-bash.sh
 
 # Place any applications that require the user to type in their password here
