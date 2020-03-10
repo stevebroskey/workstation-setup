@@ -35,8 +35,8 @@ export HOMEBREW_NO_ANALYTICS=1
 
 # Note: Homebrew needs to be set up first
 source ${MY_DIR}/scripts/common/homebrew.sh
-exit 1
 source ${MY_DIR}/scripts/common/configuration-bash.sh
+exit 1
 
 # Place any applications that require the user to type in their password here
 brew tap caskroom/cask
